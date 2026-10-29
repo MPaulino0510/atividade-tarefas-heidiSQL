@@ -21,7 +21,7 @@ app.get('/', async (req, res) => {
 
         res.json(resposta);
     } catch (erro) {
-        console.error("Erro no GET /:", erro);
+        console.error("Erro no GET", erro);
         res.status(500).json({
             mensagem: "Erro ao buscar tarefas",
             erro: erro.message
@@ -94,7 +94,7 @@ app.post('/tarefas', async (req, res) => {
             mensagem: "Tarefa cadastrada com sucesso!"
         });
     } catch (error) {
-        console.error("Erro no POST /tarefas:", error);
+        console.error("Erro no POST", error);
         res.status(500).json({
             mensagem: "Erro ao cadastrar tarefa",
             erro: error.message
@@ -129,7 +129,7 @@ app.put('/tarefas/:id', async (req, res) => {
             mensagem: "Tarefa atualizada com sucesso!"
         });
     } catch (error) {
-        console.error("Erro no PUT /tarefas/:id:", error);
+        console.error("Erro no PUT", error);
         res.status(500).json({
             mensagem: "Erro ao atualizar tarefa",
             erro: error.message
@@ -153,7 +153,7 @@ app.delete('/tarefas/:id', async (req, res) => {
             mensagem: "Tarefa excluída com sucesso!"
         });
     } catch (erro) {
-        console.error("Erro no DELETE /tarefas/:id:", erro);
+        console.error("Erro no DELETE", erro);
         res.status(500).json({
             mensagem: "Erro ao excluir tarefa",
             erro: erro.message

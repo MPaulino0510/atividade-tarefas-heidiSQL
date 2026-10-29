@@ -1,7 +1,7 @@
 import mariadb from 'mariadb';
 
 function conectarBanco() {
-    const con = mariadb.createPool({
+    const con = mariadb.createPool({ // Conjunto
         host: process.env.DB_HOST,
         user: process.env.DB_USER,
         password: process.env.DB_PASS,
