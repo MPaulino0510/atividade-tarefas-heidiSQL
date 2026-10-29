@@ -11,7 +11,7 @@ const conexao = conectarBanco();
 
 function formatarData(data) {
     if (!data) return null;
-    return data.split('T')[0]; // Divide do que esta antes, e depois do T (tava mt feio: "2026-10-22T03:00:00.000Z"), agora fica: ["2026-10-22", "03:00:00.000Z"]
+    return data.split('T')[0]; // Divide do que esta antes, e depois do T (tava mt feio: 2026-10-22T03:00:00.000Z, agora fica: 2026-10-22, 03:00:00.000Z
 }
 
 app.get('/', async (req, res) => {
